@@ -1,57 +1,30 @@
-# Weather Service API
+# Weather Service – Jac Language Implementation
 
-A simple weather service implementation built with Jac programming language that provides weather information for Sri Lankan cities.
-
----
-
-## 🌟 Features
-
-- **Multi-city Support**: Get weather data for major Sri Lankan cities  
-- **Comprehensive Data**: Temperature, humidity, wind speed, and weather conditions  
-- **Walker Pattern**: Utilizes Jac's walker architecture for data processing  
-- **Mock Data**: Uses predefined weather data for demonstration purposes  
+A robust weather service application developed using the **Jac programming language**, integrating real-time data from the OpenWeatherMap API with intelligent fallback to mock data for resilience and reliability.
 
 ---
 
-## 📍 Supported Cities
+## 🚀 Features
 
-- **Colombo**: Capital city weather data  
-- **Nuwara Eliya**: Hill country weather conditions  
-- **Kandy**: Central province weather information  
-- **Default**: Fallback data for unsupported locations  
-
----
-
-## 🧱 Code Structure
-
-### `WeatherService` Object
-
-- `api_key`: WeatherAPI.com API key (currently using mock data)  
-- `base_url`: API endpoint URL  
-- `get_weather(location)`: Returns weather data for specified location  
-
-### `WeatherWalker`
-
-- `location`: Target city for weather data  
-- `response`: Formatted weather response  
-- `weather_service`: WeatherService instance  
-- `init(location)`: Initialize walker with target location  
-- `report()`: Generate and display weather report  
+- **Real-time Weather Data**: Live updates from OpenWeatherMap API  
+- **Automatic Fallback**: Seamless switch to mock data when API is unavailable  
+- **Sri Lankan City Coverage**: Pre-configured for Colombo, Kandy, Nuwara Eliya, and Galle  
+- **Error Resilience**: Graceful handling of API or network issues  
+- **Clean Output**: User-friendly, formatted weather reports with source indicators  
 
 ---
 
-## 🚀 Usage
+## 🔧 Prerequisites
 
-The application automatically runs weather reports for three cities:
+- Jac programming language runtime  
+- Python environment (for API requests)  
+- OpenWeatherMap API key (optional – mock data is used if not provided)  
 
-```jac
-with entry {
-    walker1 = spawn WeatherWalker("Colombo");
-    walker1.report();
+---
 
-    walker2 = spawn WeatherWalker("Nuwara Eliya");
-    walker2.report();
+## 📦 Installation
 
-    walker3 = spawn WeatherWalker("Kandy");
-    walker3.report();
-}
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/weather-service-jac.git
+   cd weather-service-jac
